@@ -19,3 +19,4 @@ gem 'pry-byebug'
 gem 'coveralls', require: false
 gem 'codeship'
 gem 'rake'
+gem 'simplecov', :require => false, :group => :test

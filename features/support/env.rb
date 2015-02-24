@@ -7,6 +7,7 @@ require 'coveralls'
 
 
 
+
 # Tip for developing productively when using Cucumber. Simple way to pause cucumber scenarios in order to
 # investigate the current state of your application at that point. This method you will able to go through a
 # scenario step-by-step using @pause tag.
@@ -19,11 +20,9 @@ end
 $base_url = ENV["ACCEPTANCE_TEST_HOST"] || "http://mhigh.usatoday.com"
 Capybara.app_host = $base_url
 
+Coveralls.wear!
 
 Capybara.default_driver = :selenium
-
-
-Coveralls.wear!
 
 
 if ENV['HEADLESS']
@@ -40,7 +39,7 @@ if ENV['HEADLESS']
 else
   if ENV['LOCAL']
     Capybara.default_driver = :selenium
-
+    require 'pry'
   else
     require 'selenium'
     require_relative 'extensions/fast-selenium'
