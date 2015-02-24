@@ -1,6 +1,10 @@
 # Mobile::Web
 
-Example how test USAT mobile web using capybara/cucumber framework
+Example how write mobile web tests using capybara/cucubmer framework.
 
-## Instructions
-# capybara-mobileweb
+# Codeship Badge
+https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master
+
+# Coveralls Badge
+
+<a href='https://coveralls.io/r/gsypolt/capybara-mobileweb'><img src='https://coveralls.io/repos/gsypolt/capybara-mobileweb/badge.svg' alt='Coverage Status' /></a>
