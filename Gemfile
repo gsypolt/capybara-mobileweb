@@ -17,3 +17,5 @@ gem 'debugger-ruby_core_source'
 gem 'pry'
 gem 'pry-byebug'
 gem 'coveralls', require: false
+gem 'codeship'
+gem 'rake'
