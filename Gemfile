@@ -16,3 +16,4 @@ gem 'parallel_tests'
 gem 'debugger-ruby_core_source'
 gem 'pry'
 gem 'pry-byebug'
+gem 'coveralls', require: false

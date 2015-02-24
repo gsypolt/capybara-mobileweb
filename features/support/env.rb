@@ -3,6 +3,9 @@ require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'timeout'
 require 'pry'
+require 'coveralls'
+
+
 
 # Tip for developing productively when using Cucumber. Simple way to pause cucumber scenarios in order to
 # investigate the current state of your application at that point. This method you will able to go through a
@@ -13,11 +16,14 @@ AfterStep('@pause') do
   STDIN.getc
 end
 
-$base_url = ENV["ACCEPTANCE_TEST_HOST"] || "http://add_mobile_site_url"
+$base_url = ENV["ACCEPTANCE_TEST_HOST"] || "http://mhigh.usatoday.com"
 Capybara.app_host = $base_url
 
 
 Capybara.default_driver = :selenium
+
+
+Coveralls.wear!
 
 
 if ENV['HEADLESS']
