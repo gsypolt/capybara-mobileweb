@@ -1,6 +1,8 @@
-Feature: USAT Fronts
+@usat-fronts
+Feature: Navigate to all USAT section and sub-section fronts
+  Successfully navigate to each front and validate the relevant front appears.
 
-  @sections @fronts
+  @usat-top-sections
   Scenario Outline: Section Fronts
     When Go directly to "<section_href>" front
     Then I should see "<header_class>" front
@@ -18,7 +20,7 @@ Feature: USAT Fronts
     | /weather/     | .header-logo.header-weather | 
     | /media/       | .header-logo.header-media   | 
 
-  @news-subsections @fronts
+  @usat-news-subsections
   Scenario Outline: News Subsection Fronts
     When Go directly to "<subsection_href>" front
     Then I should see "<header_class>" front
@@ -30,7 +32,7 @@ Feature: USAT Fronts
     | /news/politics/   | .header-news.header-news-politics   |
     | /news/elections/  | .header-news.header-news-elections  |
 
-  @sports-subsections @fronts
+  @usat-sports-subsections
   Scenario Outline: Sports Subsection Fronts
     When Go directly to "<subsection_href>" front
     Then I should see "<header_class>" front
@@ -77,7 +79,7 @@ Feature: USAT Fronts
     | /sports/olympics/             | .header-sports.header-sports-olympics                                 |
     | /sports/ncaaw/                | .header-sports.header-sports-ncaaw                                    |
 
-  @life-subsections @fronts
+  @usat-life-subsections
   Scenario Outline: Life Subsection Fronts
     When Go directly to "<subsection_href>" front
     Then I should see "<header_class>" front
@@ -97,7 +99,7 @@ Feature: USAT Fronts
     | /life/web-to-watch-tech-gaming/   | .header-life.header-life-web-to-watch-tech-gaming   |
     | /life/web-to-watch-family/        | .header-life.header-life-web-to-watch-family        |
 
-  @money-subsections @fronts
+  @usat-money-subsections
   Scenario Outline: Money Subsection Fronts
     When Go directly to "<subsection_href>" front
     Then I should see "<header_class>" front
@@ -109,7 +111,7 @@ Feature: USAT Fronts
     | /money/personal-finance/          | .header-money.header-money-personal-finance   |
     | /money/cars/                      | .header-money.header-money-cars               |
 
-  @tech-subsections @fronts
+  @usat-tech-subsections
   Scenario Outline: Tech Subsection Fronts
     When Go directly to "<subsection_href>" front
     Then I should see "<header_class>" front
@@ -119,7 +121,7 @@ Feature: USAT Fronts
     | /tech/personal-tech/  | .header-tech.header-tech-personal-tech  |
     | /tech/gaming/         | .header-tech.header-tech-gaming         |
 
-  @travel-subsections @fronts
+  @usat-travel-subsections
   Scenario Outline: Travel Subsection Fronts
     When Go directly to "<subsection_href>" front
     Then I should see "<header_class>" front
@@ -134,7 +136,7 @@ Feature: USAT Fronts
     | /travel/roadwarriors/                                           | .header-travel.header-travel-roadwarriors   |
     | /travel/travel-agents/                                          | .header-travel.header-travel-travel-agents  |
 
-  @videos-photos-subsections @fronts
+  @usat-videos-photos-subsections
   Scenario Outline: Videos & Photos Subsection Fronts
     When Go directly to "<subsection_href>" front
     Then I should see "<header_class>" front
