@@ -3,10 +3,6 @@ require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'timeout'
 require 'pry'
-require 'coveralls'
-
-
-
 
 # Tip for developing productively when using Cucumber. Simple way to pause cucumber scenarios in order to
 # investigate the current state of your application at that point. This method you will able to go through a
@@ -20,8 +16,6 @@ end
 $base_url = ENV["ACCEPTANCE_TEST_HOST"] || "http://mhigh.usatoday.com"
 Capybara.app_host = $base_url
 
-Coveralls.wear!
-
 Capybara.default_driver = :selenium
 
 
@@ -31,7 +25,7 @@ if ENV['HEADLESS']
     Capybara::Poltergeist::Driver.new(
         app,
         window_size: [1280, 1024]#,
-    #debug:       true
+        #debug:       true
     )
   end
   Capybara.default_driver    = :poltergeist

@@ -1,8 +1,8 @@
+@usat_search
 Feature: USAT Search
 
-  @search
   Scenario: Search
-    Given Go to Mobile Site
+    Given Go directly to "/" front
     And Click the Menu button
     And I click on search button
     When Entering "Brian Williams" as search criteria
