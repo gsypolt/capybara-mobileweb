@@ -1,4 +1,4 @@
-Then(/^Validate each section area has (\d+) inline stories on the Home Front$/) do |expected_story_count|
+Then(/^Validate each section area has (\d+) inline stories on the Home Front$/) do |expected_stories_count|
 
   all('.padded-container.inline-stories').each { |stories|
     # DEBUG show the users section title
@@ -21,7 +21,7 @@ Then(/^Validate each section area has (\d+) inline stories on the Home Front$/) 
     # DEBUG show the user total count of inline stories per section
     puts total_count
 
-    expect(total_count).to equal(expected_story_count.to_i)
+    expect(total_count).to equal(expected_stories_count.to_i)
 
     puts "---"
   }
