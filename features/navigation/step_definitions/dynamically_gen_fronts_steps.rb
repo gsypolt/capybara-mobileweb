@@ -9,7 +9,14 @@ Then(/^I navigate to each top section and relevant front appears$/) do
 end
 
 Then(/^I navigate to each subsection and relevant front appears$/) do
-  find('nav-item-link', text: $section_links[1]).click
+
+  # require 'debug'
+  find('.nav-item-link', :text => $section_links[3]).click
   $subsection_links = all(".subsection-nav span").collect(&:text)
+  # require 'debug'
+  sub = all('.subsection-nav')
+  href = sub.find('.subsection-item a')
+
   puts $subsection_links
+  puts href["href"]
 end

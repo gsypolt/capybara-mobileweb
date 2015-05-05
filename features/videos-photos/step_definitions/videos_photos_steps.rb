@@ -54,8 +54,8 @@ And(/^I should see only "([^"]*)" on the page$/) do |filter_type|
       video_title = video_details.find('span.video-first-title').text
 
       # Debugging
-      puts duration
-      puts video_title
+      # puts duration
+      # puts video_title
 
       expect(duration).to match(/^\d{2}:\d{2}/)
       expect(video_title).to match(/\w/)

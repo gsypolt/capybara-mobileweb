@@ -1,21 +1,22 @@
-Feature: USAT Videos & Photos
+@usat_mweb_media @usat_mweb
+Feature: USAT Media Videos & Photos
 
 
-  @videos_photos @filter_only
+  @usat_mweb_media_filter_only
   Scenario Outline: Filter by Videos Only
-    When Go directly to "<href>" front
-    And Filter "<filter_type>" from Media Type Overlay
+    Given Go directly to "<section_href>" front
+    When Filter "<filter_type>" from Media Type Overlay
     Then I should see "<filter_type>" heading
-    And I should see only "<filter_type>" on the page
+      And I should see only "<filter_type>" on the page
 
   Examples:
-    | href    | filter_type |
-    | /media/ | Videos      |
-    | /media/ | Photos      |
+    | section_href  | filter_type |
+    | /media/       | Videos      |
+    | /media/       | Photos      |
 
-  @videos_photos @filter_all
+  @usat_mweb_media_filter_all
   Scenario: Filter by All Types
-    When Go directly to "/media/" front
-    And Filter "All" from Media Type Overlay
+    Given Go directly to "/media/" front
+    When Filter "All" from Media Type Overlay
     Then I should see "Videos & Photos" heading
-    And I should see both videos and photos on the page
+      And I should see both videos and photos on the page
