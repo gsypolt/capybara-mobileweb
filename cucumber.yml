@@ -1,2 +1,2 @@
-default: -profile html_report --no-source --format pretty --tags ~@ignore
+default: --profile html_report --no-source --format pretty --tags ~@ignore
 html_report: --format html --out=mweb-report.html --format pretty
