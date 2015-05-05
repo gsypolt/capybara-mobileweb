@@ -16,8 +16,6 @@ end
 $base_url = ENV["ACCEPTANCE_TEST_HOST"] || "http://mhigh.usatoday.com"
 Capybara.app_host = $base_url
 
-Capybara.default_driver = :selenium
-
 
 if ENV['HEADLESS']
   require 'capybara/poltergeist'

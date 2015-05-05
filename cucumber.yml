@@ -1,2 +1,3 @@
 default: --profile html_report --no-source --format pretty --tags ~@ignore
-html_report: --format html --out=mweb-report.html --format pretty
+html_report: --format progress --format html --out=results/cucumber-report-<%=Time.now%>.html --format pretty
+local: LOCAL=true
