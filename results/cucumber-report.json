@@ -1,0 +1,261 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Home Front Layout Validation",
+    "line": 2,
+    "description": "",
+    "tags": [
+      {
+        "name": "@usat-mweb-homefront-layout",
+        "line": 1
+      }
+    ],
+    "id": "home-front-layout-validation",
+    "uri": "features/homefront/homefront_layout.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Validate the inline stories",
+        "line": 5,
+        "description": "",
+        "tags": [
+          {
+            "name": "@usat-mweb-inline-stories",
+            "line": 4
+          }
+        ],
+        "id": "home-front-layout-validation;validate-the-inline-stories",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "Go directly to \"/\" front",
+            "line": 6,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 16,
+                  "val": "/"
+                }
+              ],
+              "location": "features/support/common_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5231138000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "Validate each section area has 3 inline stories on the Home Front",
+            "line": 7,
+            "output": [
+              "NEWS SECTION",
+              "Tea Party sets sights on White House",
+              "Great white shark gets up close and personal with filmmaker",
+              "Parents arrive for graduation to find son is missing",
+              3,
+              "---",
+              "SPORTS SECTION",
+              "Post-draft NFL power rankings",
+              "Why LeBron's buzzer beater was a complete sham",
+              "Four sleeper teams poised to break into the 2015 NFL playoffs",
+              3,
+              "---",
+              "LIFE SECTION",
+              "'Idol' is ending: Now what do I do?",
+              "'Game of Thrones' recap: 'Kill the boy'",
+              "For Sale: Lady Violet's Downton Abbey estate",
+              3,
+              "---",
+              "MONEY SECTION",
+              "With a bullet: We're shocked! Shocked!",
+              "Concentration! 'The 1%' hoards cash",
+              "Olive Garden to offer breadstick sandwiches",
+              3,
+              "---",
+              "TECH SECTION",
+              "Weekend listening - On-demand apps, Collision,",
+              "Spring clean your life with these apps",
+              "Video: The day in tech",
+              3,
+              "---",
+              "TRAVEL SECTION",
+              "The 42 most-visited monuments and memorials",
+              "Lobster roll smackdown: Maine v. Mass.",
+              "New 'surprise cruise' to visit secret ports",
+              3,
+              "---",
+              "OPINION SECTION",
+              "ISIL's Hydra advantage: Column",
+              "Patriot Act calls for compromise: Our view",
+              "Punchlines: Oprah for president?",
+              3,
+              "---"
+            ],
+            "match": {
+              "arguments": [
+                {
+                  "offset": 31,
+                  "val": "3"
+                }
+              ],
+              "location": "features/homefront/step_definitions/homefront_layout.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6602918000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Navigate to all USAT section and sub-section fronts",
+    "line": 2,
+    "description": "Successfully navigate to each front and validate the relevant front appears.",
+    "tags": [
+      {
+        "name": "@usat-fronts",
+        "line": 1
+      }
+    ],
+    "id": "navigate-to-all-usat-section-and-sub-section-fronts",
+    "uri": "features/navigation/ValidateSectionFronts.feature",
+    "elements": [
+      {
+        "keyword": "Scenario Outline",
+        "name": "Section Fronts",
+        "line": 6,
+        "description": "",
+        "tags": [
+          {
+            "name": "@usat-top-sections",
+            "line": 5
+          }
+        ],
+        "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts",
+        "type": "scenario_outline",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "Go directly to \"<section_href>\" front",
+            "line": 7,
+            "match": {
+              "location": "features/navigation/ValidateSectionFronts.feature:7"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"<header_class>\" front",
+            "line": 8,
+            "match": {
+              "location": "features/navigation/ValidateSectionFronts.feature:8"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "keyword": "Examples",
+            "name": "",
+            "line": 10,
+            "description": "",
+            "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;",
+            "rows": [
+              {
+                "cells": [
+                  "section_href",
+                  "header_class"
+                ],
+                "line": 11,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;1"
+              },
+              {
+                "cells": [
+                  "/",
+                  ".header-logo.header-home"
+                ],
+                "line": 12,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;2"
+              },
+              {
+                "cells": [
+                  "/news/",
+                  ".header-logo.header-news"
+                ],
+                "line": 13,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;3"
+              },
+              {
+                "cells": [
+                  "/sports/",
+                  ".header-logo.header-sports"
+                ],
+                "line": 14,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;4"
+              },
+              {
+                "cells": [
+                  "/life/",
+                  ".header-logo.header-life"
+                ],
+                "line": 15,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;5"
+              },
+              {
+                "cells": [
+                  "/money/",
+                  ".header-logo.header-money"
+                ],
+                "line": 16,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;6"
+              },
+              {
+                "cells": [
+                  "/tech/",
+                  ".header-logo.header-tech"
+                ],
+                "line": 17,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;7"
+              },
+              {
+                "cells": [
+                  "/travel/",
+                  ".header-logo.header-travel"
+                ],
+                "line": 18,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;8"
+              },
+              {
+                "cells": [
+                  "/opinion/",
+                  ".header-logo.header-opinion"
+                ],
+                "line": 19,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;9"
+              },
+              {
+                "cells": [
+                  "/weather/",
+                  ".header-logo.header-weather"
+                ],
+                "line": 20,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;10"
+              },
+              {
+                "cells": [
+                  "/media/",
+                  ".header-logo.header-media"
+                ],
+                "line": 21,
+                "id": "navigate-to-all-usat-section-and-sub-section-fronts;section-fronts;;11"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
