@@ -1,6 +1,6 @@
 #<% common = "ACCEPTANCE_TEST_HOST='http://localhost:8000'" %>
 
 remote: REMOTE=true --tags ~@ignre
-local: LOCAL=true --profile json_report --tags ~@ignore
+local: LOCAL=true --profile json_report --tags ~@ignore --tags @media
 html_report: --format html --out=cucumber-html-reports/cucumber-report.html --format pretty
 json_report: --format json --out=cucumber-html-reports/cucumber-report.json --format pretty
