@@ -1,4 +1,4 @@
-@usat-fronts-dynamic
+@usat-fronts-dynamic @ignore
 Feature: Navigate to all sections and subsections
 
   Background: Pre-conditions
