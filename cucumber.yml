@@ -1,4 +1,0 @@
-default: --profile html_report --no-source --format pretty --tags ~@ignore
-html_report: --format progress --format html --out=results/cucumber-report-<%=Time.now%>.html --format pretty
-local: LOCAL=true
-remote: LOCAL=false

@@ -7,7 +7,7 @@ gem 'capybara'
 gem 'rspec-expectations'
 gem 'poltergeist', ">= 1.4.0"
 gem 'selenium'
-gem 'selenium-webdriver', '2.43.0'
+gem 'selenium-webdriver', '2.45.0'
 gem 'launchy'
 gem 'rest-client'
 gem 'curb'
@@ -20,4 +20,3 @@ gem 'coveralls', require: false
 gem 'codeship'
 gem 'rake'
 gem 'bundler'
-gem 'simplecov', :require => false, :group => :test
