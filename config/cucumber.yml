@@ -2,5 +2,5 @@
 
 remote: REMOTE=true --tags ~@ignre
 local: LOCAL=true --profile json_report --tags ~@ignore
-html_report: --format html --out=results/cucumber-report.html --format pretty
-json_report: --format json --out=results/cucumber-report.json
+html_report: --format html --out=cucumber-html-reports/cucumber-report.html --format pretty
+json_report: --format json --out=cucumber-html-reports/cucumber-report.json
