@@ -1,0 +1,187 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "USAT Media Videos & Photos",
+    "line": 2,
+    "description": "",
+    "tags": [
+      {
+        "name": "@usat_mweb_media",
+        "line": 1
+      },
+      {
+        "name": "@usat_mweb",
+        "line": 1
+      }
+    ],
+    "id": "usat-media-videos-&-photos",
+    "uri": "features/videos-photos/VideosPhotos.feature",
+    "elements": [
+      {
+        "keyword": "Scenario Outline",
+        "name": "Filter by Videos Only",
+        "line": 6,
+        "description": "",
+        "tags": [
+          {
+            "name": "@usat_mweb_media_filter_only",
+            "line": 5
+          }
+        ],
+        "id": "usat-media-videos-&-photos;filter-by-videos-only",
+        "type": "scenario_outline",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "Go directly to \"<section_href>\" front",
+            "line": 7,
+            "match": {
+              "location": "features/videos-photos/VideosPhotos.feature:7"
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "Filter \"<filter_type>\" from Media Type Overlay",
+            "line": 8,
+            "match": {
+              "location": "features/videos-photos/VideosPhotos.feature:8"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"<filter_type>\" heading",
+            "line": 9,
+            "match": {
+              "location": "features/videos-photos/VideosPhotos.feature:9"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see only \"<filter_type>\" on the page",
+            "line": 10,
+            "match": {
+              "location": "features/videos-photos/VideosPhotos.feature:10"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "keyword": "Examples",
+            "name": "",
+            "line": 12,
+            "description": "",
+            "id": "usat-media-videos-&-photos;filter-by-videos-only;",
+            "rows": [
+              {
+                "cells": [
+                  "section_href",
+                  "filter_type"
+                ],
+                "line": 13,
+                "id": "usat-media-videos-&-photos;filter-by-videos-only;;1"
+              },
+              {
+                "cells": [
+                  "/media/",
+                  "Videos"
+                ],
+                "line": 14,
+                "id": "usat-media-videos-&-photos;filter-by-videos-only;;2"
+              },
+              {
+                "cells": [
+                  "/media/",
+                  "Photos"
+                ],
+                "line": 15,
+                "id": "usat-media-videos-&-photos;filter-by-videos-only;;3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Filter by All Types",
+        "line": 18,
+        "description": "",
+        "tags": [
+          {
+            "name": "@usat_mweb_media_filter_all",
+            "line": 17
+          }
+        ],
+        "id": "usat-media-videos-&-photos;filter-by-all-types",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "Go directly to \"/media/\" front",
+            "line": 19,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 16,
+                  "val": "/media/"
+                }
+              ],
+              "location": "features/support/common_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 907134000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "Filter \"All\" from Media Type Overlay",
+            "line": 20,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 8,
+                  "val": "All"
+                }
+              ],
+              "location": "features/videos-photos/step_definitions/videos_photos_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1051299999
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Videos & Photos\" heading",
+            "line": 21,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 14,
+                  "val": "Videos & Photos"
+                }
+              ],
+              "location": "features/videos-photos/step_definitions/videos_photos_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see both videos and photos on the page",
+            "line": 22,
+            "match": {
+              "location": "features/videos-photos/step_definitions/videos_photos_steps.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8288183999
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
